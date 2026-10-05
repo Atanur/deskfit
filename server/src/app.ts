@@ -27,6 +27,9 @@ const CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 
 const HEADERS = { 'content-type': 'application/json', 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' }
 
+// The public board holds nothing private and takes no credentials, so any web page may read it (the DeskFit website does).
+const PUBLIC_HEADERS = { ...HEADERS, 'access-control-allow-origin': '*' }
+
 const json = (data: unknown, status = 200): Response => new Response(JSON.stringify(data), { status, headers: HEADERS })
 
 const fail = (status: number, error: string): Response => json({ error }, status)
@@ -221,7 +224,7 @@ const globalBoard = async (env: Env, period: string, limit: number): Promise<Res
   const key = `lb:${period}:${limit}`
   const cached = await env.CACHE.get(key)
 
-  if (cached) return new Response(cached, { headers: HEADERS })
+  if (cached) return new Response(cached, { headers: PUBLIC_HEADERS })
 
   const { results } = await env.DB.prepare(
     `SELECT u.nickname AS nickname, SUM(e.points) AS points, COUNT(*) AS sets
@@ -237,7 +240,7 @@ const globalBoard = async (env: Env, period: string, limit: number): Promise<Res
 
   await env.CACHE.put(key, out, { expirationTtl: 60 })
 
-  return new Response(out, { headers: HEADERS })
+  return new Response(out, { headers: PUBLIC_HEADERS })
 }
 
 const postEvents = async (env: Env, user: User, data: Record<string, unknown>): Promise<Response> => {

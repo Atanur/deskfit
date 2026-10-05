@@ -27,6 +27,7 @@
         <li><a class="link" href="#how">How it works</a></li>
         <li><a class="link" href="#install">Install</a></li>
         <li><a class="link" href="#use">Using it</a></li>
+        <li><a class="link" href="#board">Leaderboard</a></li>
         <li><a class="link" href="#privacy">Privacy</a></li>
         <li><a class="link" href="https://github.com/atanur/deskfit">GitHub</a></li>
       </ul>
@@ -167,6 +168,25 @@
       </div>
     </section>
 
+    <section class="block" id="board" aria-labelledby="board-h">
+      <p class="eyebrow">Leaderboard</p>
+      <h2 id="board-h">Who is moving this week.</h2>
+      <p class="sub">Live from the public board. Joining takes a nickname and nothing else, and it is entirely optional.</p>
+      <div class="board" data-board data-api="https://deskfit-api.atanur.dev">
+        <div class="board-bar">
+          <div class="seg" role="group" aria-label="Period">
+            <button type="button" data-period="week" aria-pressed="true">This week</button>
+            <button type="button" data-period="all" aria-pressed="false">All time</button>
+          </div>
+          <button type="button" class="btn small" data-refresh>Refresh</button>
+        </div>
+        <ol class="rows" data-rows aria-live="polite"></ol>
+        <p class="board-note" data-note>Loading the board…</p>
+        <noscript><p class="board-note">The live board needs JavaScript. Open Board inside DeskFit to see it.</p></noscript>
+      </div>
+      <p class="fine">The board shows a nickname, points and sets, nothing else. Want to be on it? Install DeskFit and open Board.</p>
+    </section>
+
     <section class="block" id="privacy" aria-labelledby="privacy-h">
       <p class="eyebrow">Privacy and leaderboards</p>
       <h2 id="privacy-h">Your body stays on your machine.</h2>
@@ -227,7 +247,7 @@
       </div>
       <div>
         <p><b class="ink">This site</b></p>
-        <p>No cookies, no analytics, no third-party requests.</p>
+        <p>No cookies and no analytics. The live board is read from DeskFit’s own API; nothing else is requested from other sites.</p>
       </div>
     </div>
   </footer>

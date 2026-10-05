@@ -104,6 +104,11 @@ check('security account registered', sec.r.status === 200, JSON.stringify(sec.r)
 const health = await fetch(base + '/health')
 check('responses are not cached and not sniffed', health.headers.get('cache-control') === 'no-store' && health.headers.get('x-content-type-options') === 'nosniff')
 
+const board = await fetch(base + '/v1/leaderboard?period=week&limit=5')
+check('public board can be read by a web page (CORS)', board.headers.get('access-control-allow-origin') === '*')
+const signed = await fetch(base + '/v1/me')
+check('private routes do not open up to web pages', signed.headers.get('access-control-allow-origin') === null)
+
 const oversized = await fetch(base + '/v1/register', { method: 'POST', body: JSON.stringify({ nickname: 'x'.repeat(30000) }) })
 check('oversized body rejected', oversized.status === 413)
 
