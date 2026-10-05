@@ -1,0 +1,16 @@
+services:
+  deskfit:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      # Required: 64 hex characters (openssl rand -hex 32). Account secrets are stored encrypted with it; keep a copy.
+      SECRETS_KEY: "${DESKFIT_SECRETS_KEY:?set DESKFIT_SECRETS_KEY to the output of: openssl rand -hex 32}"
+      # Behind a reverse proxy (nginx, Caddy, a load balancer): lets sign-up limits see real client IPs.
+      TRUST_PROXY: "0"
+    volumes:
+      - deskfit-data:/data
+    restart: unless-stopped
+
+volumes:
+  deskfit-data:

@@ -1,0 +1,33 @@
+{
+  "name": "deskfit",
+  "version": "0.6.2",
+  "description": "Micro-workouts while Claude works: a daily goal, streaks and leaderboards for people who sit at a desk.",
+  "author": {
+    "name": "atanur"
+  },
+  "homepage": "https://deskfit.atanur.dev",
+  "repository": "https://github.com/atanur/deskfit",
+  "license": "MIT",
+  "keywords": [
+    "fitness",
+    "workout",
+    "health",
+    "mod",
+    "leaderboard"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "nudgeAfterSeconds": {
+      "type": "number",
+      "title": "Nudge delay (seconds)",
+      "description": "How long Claude must be working before DeskFit suggests a set.",
+      "default": 20
+    },
+    "backendUrl": {
+      "type": "string",
+      "title": "Leaderboard server URL",
+      "description": "Default leaderboard server for everyone on this machine (an admin can set it). People can override it in DeskFit Settings. DeskFit downloads the public board when it opens, and nothing about the person is sent until they join; empty keeps everything local.",
+      "default": "https://deskfit-api.atanur.dev"
+    }
+  }
+}

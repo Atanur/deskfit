@@ -1,0 +1,29 @@
+{
+  "name": "deskfit",
+  "owner": {
+    "name": "atanur"
+  },
+  "metadata": {
+    "description": "DeskFit: short workouts while Claude works, with a daily goal, streaks, badges and optional leaderboards."
+  },
+  "plugins": [
+    {
+      "name": "deskfit",
+      "source": "./",
+      "description": "Micro-workouts while Claude works: a daily goal, streaks and leaderboards.",
+      "author": {
+        "name": "atanur"
+      },
+      "homepage": "https://deskfit.atanur.dev",
+      "repository": "https://github.com/atanur/deskfit",
+      "license": "MIT",
+      "keywords": [
+        "fitness",
+        "workout",
+        "health",
+        "mod",
+        "leaderboard"
+      ]
+    }
+  ]
+}

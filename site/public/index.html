@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeskFit: short workouts while Claude works</title>
+<meta name="description" content="DeskFit is a Claude Code mod that turns the seconds you wait on Claude into short, well-chosen exercise sets. Daily goal, streaks, badges and optional leaderboards. Everything stays on your machine.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<meta property="og:title" content="DeskFit: short workouts while Claude works">
+<meta property="og:description" content="Move while Claude thinks. A Claude Code mod with a daily goal, streaks and optional leaderboards.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://deskfit.atanur.dev/">
+<meta property="og:image" content="https://deskfit.atanur.dev/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<div class="wrap">
+  <header class="nav">
+    <a class="brand" href="/"><img src="/logo.svg" alt="" width="30" height="30">DeskFit</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="link" href="#how">How it works</a></li>
+        <li><a class="link" href="#install">Install</a></li>
+        <li><a class="link" href="#use">Using it</a></li>
+        <li><a class="link" href="#privacy">Privacy</a></li>
+        <li><a class="link" href="https://github.com/atanur/deskfit">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <p class="eyebrow">A mod for Claude Code</p>
+        <h1>Move while Claude <em>thinks.</em></h1>
+        <p class="lede">You wait on Claude dozens of times a day. DeskFit turns those seconds into short, well-chosen exercise sets, with a daily goal, streaks and badges. Everything stays on your machine.</p>
+        <div class="code" role="group" aria-label="Install commands">
+          <button class="copy" type="button" data-copy="hero-cmd">Copy</button>
+<pre id="hero-cmd"><span class="prompt">$ </span>/plugin marketplace add atanur/deskfit
+<span class="prompt">$ </span>/plugin install deskfit@deskfit
+<span class="prompt">$ </span>/workout</pre>
+        </div>
+        <div class="cta-row">
+          <a class="btn primary" href="#install">Install in a minute</a>
+          <a class="btn" href="#how">See how it works</a>
+        </div>
+        <p class="fine">Free and open source (MIT). English and Türkçe.</p>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <img class="shot back" src="/assets/screen-set.png" alt="" width="880" height="1456">
+        <img class="shot front" src="/assets/screen-home.png" alt="" width="880" height="1868">
+      </div>
+    </div>
+
+    <section class="block" id="how" aria-labelledby="how-h">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-h">Three steps, none of them a chore.</h2>
+      <p class="sub">DeskFit never interrupts your work. It waits until Claude is busy, offers one move, and gets out of the way.</p>
+      <ol class="steps">
+        <li><h3>Claude gets busy</h3><p>When a task runs long, a quiet line above your prompt suggests a move that fits your body, your desk and the week so far.</p></li>
+        <li><h3>You do one short set</h3><p>Sets last 15 to 60 seconds. A line-art figure shows the move, a big timer counts down, and you can swap it for another.</p></li>
+        <li><h3>The streak does the rest</h3><p>Reach your daily goal, keep the flame going, unlock badges. Rate each set and the next ones adjust.</p></li>
+      </ol>
+
+      <div class="spacer"></div>
+      <h2>Every screen, one look.</h2>
+      <p class="sub">A calm, monochrome pane with a single signal colour for progress. Light and dark follow your system.</p>
+      <div class="gallery" role="list" tabindex="0" aria-label="DeskFit screens">
+        <figure role="listitem"><img src="/assets/screen-home.png" alt="DeskFit home: a ring showing 3 of 5 sets today, level 3, a five day streak and the suggested move, chair squats." width="880" height="1868" loading="lazy"><figcaption><b>Home</b>Today's ring, your streak and the next move.</figcaption></figure>
+        <figure role="listitem"><img src="/assets/screen-set.png" alt="A set in progress: line art of a chair squat, a large timer at 0:27 and Finish now and Cancel buttons." width="880" height="1456" loading="lazy"><figcaption><b>A set</b>One move, one timer, nothing else.</figcaption></figure>
+        <figure role="listitem"><img src="/assets/screen-result.png" alt="Set complete: plus 24 XP, daily goal reached with a six day streak and the On a roll badge unlocked." width="880" height="1416" loading="lazy"><figcaption><b>Result</b>XP, streak and badges, then how it felt.</figcaption></figure>
+        <figure role="listitem"><img src="/assets/screen-stats.png" alt="Stats: sets and active minutes per day, work by body region against your goal, and the badge collection." width="880" height="2682" loading="lazy"><figcaption><b>Stats</b>Which body regions are getting their share.</figcaption></figure>
+        <figure role="listitem"><img src="/assets/screen-moves.png" alt="The Moves library with region and place filters and cards for chair squats, wall push-ups, calf raises and plank." width="880" height="1870" loading="lazy"><figcaption><b>Moves</b>All 64 moves, and why one is not in your plan.</figcaption></figure>
+        <figure role="listitem"><img src="/assets/screen-board.png" alt="The leaderboard with a podium for the top three and your own rank highlighted." width="880" height="1554" loading="lazy"><figcaption><b>Board</b>Optional. Weekly, all time, or a private team.</figcaption></figure>
+      </div>
+
+      <div class="moves" aria-label="A few of the moves">
+        <figure><img src="/assets/moves/chair-squat.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Chair squats</figcaption></figure>
+        <figure><img src="/assets/moves/wall-pushup.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Wall push-ups</figcaption></figure>
+        <figure><img src="/assets/moves/calf-raise.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Calf raises</figcaption></figure>
+        <figure><img src="/assets/moves/plank.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Plank</figcaption></figure>
+        <figure><img src="/assets/moves/shoulder-roll.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Shoulder rolls</figcaption></figure>
+        <figure><img src="/assets/moves/jumping-jacks.svg" alt="" width="150" height="150" loading="lazy"><figcaption>Jumping jacks</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="plan-h">
+      <div class="split">
+        <div>
+          <p class="eyebrow">The planner</p>
+          <h2 id="plan-h">It picks for your body, not at random.</h2>
+          <p class="sub flush">64 moves, each tagged with the muscles it works, where you can do it and what gear it needs. Onboarding takes about a minute.</p>
+        </div>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg><div><b>Balanced by region</b><span>Neck to calves, eight body regions, tracked over the last seven days against your goal.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg><div><b>Office or home</b><span>Quiet mode, no jumping, no gear. At home, add dumbbells, a band, a kettlebell or a bar.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg><div><b>Gentle where it should be</b><span>Limits like knees or lower back are respected. A set that hurts rests that area for a week.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg><div><b>It learns from you</b><span>Too easy, just right, too hard: the level shifts after a few ratings.</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="block" id="install" aria-labelledby="install-h">
+      <p class="eyebrow">Install</p>
+      <h2 id="install-h">Add it from inside Claude Code.</h2>
+      <p class="sub">DeskFit is a plugin. The repository is its own marketplace, so there is nothing to download by hand.</p>
+      <div class="split">
+        <ol class="how-list">
+          <li><b>Add the marketplace.</b><br><span class="dim">Run the first command in any Claude Code session.</span></li>
+          <li><b>Install the plugin.</b><br><span class="dim">The second command installs DeskFit for your user.</span></li>
+          <li><b>Open it.</b><br><span class="dim">Type <span class="mono">/workout</span>. A short setup asks for your age, goal and where you work out, then you are ready.</span></li>
+        </ol>
+        <div>
+          <div class="code" role="group" aria-label="Install commands">
+            <button class="copy" type="button" data-copy="install-cmd">Copy</button>
+<pre id="install-cmd"><span class="prompt">$ </span>/plugin marketplace add atanur/deskfit
+<span class="prompt">$ </span>/plugin install deskfit@deskfit
+<span class="prompt">$ </span>/workout</pre>
+          </div>
+          <p class="fine">To remove it later: <span class="mono">/plugin uninstall deskfit@deskfit</span>. Your progress is stored only on your machine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="use" aria-labelledby="use-h">
+      <p class="eyebrow">Using it</p>
+      <h2 id="use-h">Everything lives behind one command.</h2>
+      <p class="sub">The pane opens beside your conversation. Every button has a key, so you never need the mouse.</p>
+      <div class="split">
+        <div>
+          <table>
+            <thead><tr><th scope="col">Command</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><td>/workout</td><td>Open DeskFit, or start the setup the first time.</td></tr>
+              <tr><td>/workout moves</td><td>Browse all moves, filter by body region and place, try one.</td></tr>
+              <tr><td>/workout stats</td><td>Level, streak, sets per day, work by body region, badges.</td></tr>
+              <tr><td>/workout board</td><td>The leaderboard, your team and your account.</td></tr>
+              <tr><td>/workout settings</td><td>Goal, gear, language, look, sound and your data.</td></tr>
+              <tr><td>/workout focus 2h</td><td>Pause suggestions for a while. <span class="mono">focus off</span> ends it.</td></tr>
+              <tr><td>/workout reset</td><td>Erase your profile and progress from this machine.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Keys inside the pane</h3>
+          <table>
+            <tbody>
+              <tr><td><span class="kbd">s</span></td><td>Start the suggested set</td></tr>
+              <tr><td><span class="kbd">n</span></td><td>Shuffle to a different move</td></tr>
+              <tr><td><span class="kbd">f</span> / <span class="kbd">c</span></td><td>Finish the set now / cancel it</td></tr>
+              <tr><td><span class="kbd">h</span> <span class="kbd">m</span> <span class="kbd">t</span> <span class="kbd">l</span> <span class="kbd">o</span></td><td>Home, Moves, Stats, Board, Settings</td></tr>
+              <tr><td><span class="kbd">Esc</span></td><td>Close the pane</td></tr>
+            </tbody>
+          </table>
+          <p class="fine mt20">Prefer to stay in flow? The line above your prompt shows your streak and offers a set only when Claude is busy. You can hide it in Settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="privacy" aria-labelledby="privacy-h">
+      <p class="eyebrow">Privacy and leaderboards</p>
+      <h2 id="privacy-h">Your body stays on your machine.</h2>
+      <p class="sub">DeskFit works fully offline. Leaderboards are opt-in, and you can use the app for years without ever joining one.</p>
+      <div class="split">
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/></svg><div><b>Nothing about you is sent until you join</b><span>DeskFit downloads the public board when it opens, a plain request that carries no data of yours. Age, weight, height, goal and limits never leave your device, even if you do join.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"/></svg><div><b>A nickname is all it takes</b><span>A joined account shares a nickname, points, sets and finish times. No email, no password.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0V4zM12 13v4M8 21h8M10 17h4"/></svg><div><b>Private team boards</b><span>Create a team, share the invite code with colleagues, and compete on the same scores. Rotate the code or close the team any time.</span></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg><div><b>Delete it all</b><span>One button in Settings removes your leaderboard account. Another erases everything on your device.</span></div></li>
+        </ul>
+        <div>
+          <h3>Run your own server</h3>
+          <p class="dim">A company can host its own board. The same API runs on Cloudflare (Workers and D1) or as a single SQLite file on any machine with Node 22.13+ or Docker. Point DeskFit at it in Settings, or set it for everyone with the <span class="mono">backendUrl</span> plugin option.</p>
+          <p class="dim">Scores are computed by the server from signed requests, with rate limits on sign-ups and sets.</p>
+          <p><a href="https://github.com/atanur/deskfit#leaderboard-server">Self-hosting guide on GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="faq-h">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h">Good to know.</h2>
+      <div class="faq">
+        <details><summary>Is this medical advice?</summary><p>No. DeskFit suggests general, low-impact exercise. Stop if something hurts and talk to a professional if you are unsure. A set you mark as "It hurt" rests that body area for a week.</p></details>
+        <details><summary>Will it interrupt me while I work?</summary><p>It only offers a move when Claude has been busy for a while (20 seconds by default, adjustable) and you have not hit your goal. Focus mode pauses suggestions, and the line above the prompt can be hidden.</p></details>
+        <details><summary>Does it need an account or internet?</summary><p>No. Everything works offline. The only thing DeskFit does online is download the public board when it opens, and send your nickname, points and sets once you choose to join. To turn even the download off, clear the server address in Settings.</p></details>
+        <details><summary>I sit in an open office. Can I be quiet?</summary><p>Turn on quiet mode in Settings. It removes jumping and loud moves. Moves that need gear are used only if you say you own it.</p></details>
+        <details><summary>Which languages are supported?</summary><p>English and Türkçe, switchable in Settings.</p></details>
+        <details><summary>Who made this, and is it from Anthropic?</summary><p>DeskFit is an independent, open source project by Atanur. It is not made, endorsed or supported by Anthropic.</p></details>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="cta-h">
+      <div class="band">
+        <h2 id="cta-h">Your next build is a good time for ten squats.</h2>
+        <p class="sub">Two commands, no account, free forever.</p>
+        <div class="code" role="group" aria-label="Install commands">
+          <button class="copy" type="button" data-copy="band-cmd">Copy</button>
+<pre id="band-cmd"><span class="prompt">$ </span>/plugin marketplace add atanur/deskfit
+<span class="prompt">$ </span>/plugin install deskfit@deskfit</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="cols">
+      <div>
+        <p><b class="ink">DeskFit</b></p>
+        <p>Open source under the <a href="https://github.com/atanur/deskfit/blob/main/LICENSE">MIT license</a>. <a href="https://github.com/atanur/deskfit">Source on GitHub</a>.</p>
+        <p>An independent project. Not affiliated with Anthropic. Claude and Claude Code are trademarks of Anthropic.</p>
+      </div>
+      <div>
+        <p><b class="ink">Credits</b></p>
+        <p>Line-art exercise drawings come from <a href="https://github.com/bryllim/workout-guide">Workout Guide</a> by Bryl Lim, built on <a href="https://github.com/everkinetic/data">Everkinetic</a>, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Some moves were drawn with an image model in the same style and share that licence. Details are in <a href="https://github.com/atanur/deskfit/blob/main/NOTICE.md">NOTICE.md</a>.</p>
+      </div>
+      <div>
+        <p><b class="ink">This site</b></p>
+        <p>No cookies, no analytics, no third-party requests.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="/site.js"></script>
+</body>
+</html>

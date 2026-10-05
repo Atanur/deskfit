@@ -1,0 +1,7 @@
+# Static site for deskfit.atanur.dev (Cloudflare Workers static assets, no script).
+name = "deskfit-site"
+compatibility_date = "2026-01-01"
+routes = [{ pattern = "deskfit.atanur.dev", custom_domain = true }]
+
+[assets]
+directory = "./public"

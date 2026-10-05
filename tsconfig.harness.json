@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "baseUrl": ".", "paths": { "claude-code": ["scripts/harness/claude-code.ts"] }, "jsx": "react", "jsxFactory": "h", "jsxFragmentFactory": "Fragment" }
+}

@@ -1,0 +1,17 @@
+name = "deskfit-api"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+routes = [{ pattern = "deskfit-api.atanur.dev", custom_domain = true }]
+
+# daily housekeeping: expired limits and nonces, accounts that never sent a set in 30 days
+[triggers]
+crons = ["17 3 * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "deskfit"
+database_id = "bafc99da-3abb-43c9-a0d3-acc0669c586e"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "ed4947c163384914a290b52d5632dd31"
