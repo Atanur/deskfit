@@ -50,6 +50,14 @@ In Claude Code:
 `/workout` opens DeskFit. A one-minute setup asks for your age, goal and where you work out. To remove it later:
 `/plugin uninstall deskfit@deskfit`.
 
+**Early access.** DeskFit is built on Claude Code's plugin function hooks, which Claude Code currently loads only when they are turned
+on (a rollout flag, so it depends on your version and account). If `/workout` answers "Unknown command", set this in the environment
+you start Claude Code from, for example in `~/.zshrc`, and start Claude Code again:
+
+    export CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1
+
+With `claude --debug`, a line "hooks module deskfit@deskfit not loaded" confirms that this is the cause.
+
 ## Using it
 
 | Command | What it does |

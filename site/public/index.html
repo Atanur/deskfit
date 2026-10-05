@@ -49,7 +49,7 @@
           <a class="btn primary" href="#install">Install in a minute</a>
           <a class="btn" href="#how">See how it works</a>
         </div>
-        <p class="fine">Free and open source (MIT). English and Türkçe.</p>
+        <p class="fine">Free and open source (MIT). English and Türkçe. Needs Claude Code’s plugin function hooks, an early-access feature: see <a href="#install">Install</a>.</p>
       </div>
       <div class="stage" aria-hidden="true">
         <img class="shot back" src="/assets/screen-set.png" alt="" width="880" height="1456">
@@ -123,6 +123,11 @@
 <span class="prompt">$ </span>/workout</pre>
           </div>
           <p class="fine">To remove it later: <span class="mono">/plugin uninstall deskfit@deskfit</span>. Your progress is stored only on your machine.</p>
+          <p class="fine"><b class="ink">Early access.</b> DeskFit is built on Claude Code’s plugin function hooks, which Claude Code loads only when they are turned on. If <span class="mono">/workout</span> says “Unknown command”, add this line to your shell profile (for example <span class="mono">~/.zshrc</span>) and start Claude Code again:</p>
+          <div class="code" role="group" aria-label="Environment variable">
+            <button class="copy" type="button" data-copy="env-cmd">Copy</button>
+<pre id="env-cmd"><span class="prompt">$ </span>export CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1</pre>
+          </div>
         </div>
       </div>
     </section>
@@ -186,6 +191,7 @@
       <p class="eyebrow">Questions</p>
       <h2 id="faq-h">Good to know.</h2>
       <div class="faq">
+        <details><summary>I typed /workout and got “Unknown command”</summary><p>DeskFit uses Claude Code’s plugin function hooks, an early-access feature that is off by default for some versions and accounts. Add <span class="mono">export CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1</span> to your shell profile, start Claude Code again, and <span class="mono">/workout</span> will be there. Running <span class="mono">claude --debug</span> shows “hooks module deskfit@deskfit not loaded” when this is the cause.</p></details>
         <details><summary>Is this medical advice?</summary><p>No. DeskFit suggests general, low-impact exercise. Stop if something hurts and talk to a professional if you are unsure. A set you mark as "It hurt" rests that body area for a week.</p></details>
         <details><summary>Will it interrupt me while I work?</summary><p>It only offers a move when Claude has been busy for a while (20 seconds by default, adjustable) and you have not hit your goal. Focus mode pauses suggestions, and the line above the prompt can be hidden.</p></details>
         <details><summary>Does it need an account or internet?</summary><p>No. Everything works offline. The only thing DeskFit does online is download the public board when it opens, and send your nickname, points and sets once you choose to join. To turn even the download off, clear the server address in Settings.</p></details>
